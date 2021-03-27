@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw3</title>
+</head>
+
+<body>
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+        var a = +prompt("vvedite pervoe chislo", 0), b = +prompt("vvedite vtoroe chislo", 0), toDo = prompt("vvedite deistvie \n (add, sub, mult, div)", "add");
+
+        function calculator() {
+            if (!Number.isNaN(a) || !Number.isNaN(b)) {
+                if (toDo == 'add') {
+                    return `${a} + ${b} = ${a + b}`;
+                } else if (toDo == 'sub') {
+                    return `${a} - ${b} = ${a - b}`;
+                } else if (toDo == 'mult') {
+                    return `${a} * ${b} = ${a * b}`;
+                } else if (toDo == 'div') {
+                    return `${a} / ${b} = ${a / b}`;
+                } else return "vvedite korrectnoe deistvie"
+            } else return "kak minimun odno chislo bylo vvedene necorectno"
+        }
+
+        alert(calculator());
+
+    </script>
+
+</body>
+
+</html>
