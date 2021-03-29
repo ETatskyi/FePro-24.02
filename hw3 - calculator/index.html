@@ -15,20 +15,30 @@
         var a = +prompt("vvedite pervoe chislo", 0), b = +prompt("vvedite vtoroe chislo", 0), toDo = prompt("vvedite deistvie \n (add, sub, mult, div)", "add");
 
         function calculator() {
+            var out;
             if (!Number.isNaN(a) || !Number.isNaN(b)) {
-                if (toDo == 'add') {
-                    return `${a} + ${b} = ${a + b}`;
-                } else if (toDo == 'sub') {
-                    return `${a} - ${b} = ${a - b}`;
-                } else if (toDo == 'mult') {
-                    return `${a} * ${b} = ${a * b}`;
-                } else if (toDo == 'div') {
-                    return `${a} / ${b} = ${a / b}`;
-                } else return "vvedite korrectnoe deistvie"
+                switch (toDo) {
+                    case 'add':
+                        return `${a} + ${b} = ${a + b}`;
+                        break;
+                    case 'sub':
+                        return `${a} - ${b} = ${a - b}`;
+                        break;
+                    case 'mult':
+                        return `${a} * ${b} = ${a * b}`;
+                    case 'div':
+                        return `${a} / ${b} = ${a / b}`;
+                        break;
+                    default:
+                        return "vvedite korrectnoe deistvie"
+                }
+
             } else return "kak minimun odno chislo bylo vvedene necorectno"
         }
 
+
         alert(calculator());
+
 
     </script>
 
