@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    text-align: center;
+}
+
+#galeryContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 160px;
+    margin: 10px 20px;
+}
+
+#focusedItem{
+    max-height: 600px;
+    max-width: 600px;
+    margin: auto;
+}
