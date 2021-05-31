@@ -16,7 +16,7 @@ console.log(findBestAndWorth(calculateAverageGrades(grades)))
 
 function calculateAverageGrades(arr) {
   let output = [];
-  for (stud in arr) {
+  for (let stud in arr) {
     output[stud] = { name: arr[stud].name, averageGrade: findMean(arr[stud].grades) }
   }
   return output
